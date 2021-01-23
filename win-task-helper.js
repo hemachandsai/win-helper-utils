@@ -4,6 +4,7 @@ const exec = util.promisify(require('child_process').exec);
 const player = require('sound-play');
 const path = require('path');
 
+
 let turnOnCommand = `regedit.exe /S ${path.join(__dirname, "scripts", "proxy_on.reg")}`;
 let turnOffCommand = `regedit.exe /S ${path.join(__dirname, "scripts", "proxy_off.reg")}`;
 let powerShellLaunchCommand = `powershell -Command "Start-Process cmd -Verb RunAs"`;
